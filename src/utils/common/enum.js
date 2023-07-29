@@ -9,7 +9,8 @@ const BOOKING_STATUS = {
     PENDING   : "pending",
     CONFIRMED : "confirmed",
     CANCELLED: "cancelled",
-    INITIATED : 'initiated'
+    INITIATED : 'initiated',
+    BOOKED : "booked"
 }
 
 module.exports = {
