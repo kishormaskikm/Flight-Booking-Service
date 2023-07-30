@@ -56,7 +56,7 @@ async function makePayment(data) {
             throw new AppError('The user corresponding to the booking doesnt match', StatusCodes.BAD_REQUEST);
         }
         // we assume here that payment is successful
-         await bookingRepository.update(data.bookingId, {status: BOOKED}, transaction);
+         await bookingRepository.update(data.bookingId, {status: CONFIRMED}, transaction);
          await transaction.commit();
     } catch(error) {
         await transaction.rollback();

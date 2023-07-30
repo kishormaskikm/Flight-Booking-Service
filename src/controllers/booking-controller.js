@@ -21,6 +21,7 @@ async function createBooking(req, res) {
             userId: req.body.userId,
             noOfSeats: req.body.noOfSeats
         });
+        inMemDb[idempotencyKey] = idempotencyKey;
         SuccessResponse.data = response;
         return res
                 .status(StatusCodes.OK)
